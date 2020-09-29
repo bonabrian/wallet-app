@@ -1,0 +1,161 @@
+@import 'variables.scss';
+@import 'base.scss';
+@import 'card.scss';
+
+.wallet-container {
+  display: flex;
+  max-width: 480px;
+  background-color: $blue;
+  border-radius: 4px;
+  margin: auto;
+  flex-direction: column;
+  .wallet-header {
+    padding: 1rem;
+    color: $text;
+  }
+}
+.balance {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-size: 1.25em;
+  }
+  &__value {
+    font-size: 2em;
+    font-weight: bold;
+  }
+}
+.summary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+  .income {
+    font-size: 1em;
+    &__title {
+      opacity: .8;
+    }
+  }
+  .expenses {
+    font-size: 1em;
+    &__title {
+      opacity: .8;
+    }
+    &__total {
+      color: $red;
+    }
+  }
+}
+.wallet-dashboard {
+  display: block;
+  background-color: $white;
+  border-radius: 20px 20px 4px 4px;
+  &__title {
+    display: inline-block;
+    color: $text-invert;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    font-weight: bold;
+  }
+  .tabs {
+    display: block;
+    color: $text-invert;
+    padding: 1rem 0;
+    margin: 0 1rem;
+    .tab {
+      display: inline-block;
+      cursor: pointer;
+      opacity: 0.8;
+      margin: 0 1rem;
+      &.active {
+        opacity: 1;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .tab-content {
+    margin: 0 1rem;
+    label {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding-top: 1rem;
+    }
+    .list {
+      height: 300px;
+      overflow-y: auto;
+      margin: 0;
+      padding: 0;
+      .expense {
+        .card__text {
+          color: $red;
+        }
+      }
+      .entry {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .options {
+          display: flex;
+          font-size: 0.75rem;
+          & > div {
+            cursor: pointer;
+            margin: 0 4px;
+            &:nth-child(2) {
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+    .input-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      input {
+        width: 100%;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: $grey-lightest;
+  color: $text-invert;
+  border-radius: 12px;
+  transition: all .25s ease;
+  padding: 7px 13px 7px 10px;
+  &:focus {
+    outline: none;
+    border-color: $blue;
+  }
+}
+
+button {
+  background-color: $blue;
+  color: $text;
+  border: 0;
+  outline: none;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all .25s ease;
+  &:hover {
+    background-color: darken($color: $blue, $amount: 10%);
+  }
+}
+
+.hide {
+  display: none !important;
+}

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "TT Interfaces";
+  font-weight: normal;
+  font-style: normal;
+  src: url(../fonts/TTInterfaces-Regular.eot);
+  src: url(../fonts/TTInterfaces-Regular.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/TTInterfaces-Regular.woff2) format('woff2'),
+        url(../fonts/TTInterfaces-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "TT Interfaces";
+  font-weight: bold;
+  font-style: normal;
+  src: url(../fonts/TTInterfaces-Bold.eot);
+  src: url(../fonts/TTInterfaces-Bold.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/TTInterfaces-Bold.woff2) format('woff2'),
+        url(../fonts/TTInterfaces-Bold.woff) format("woff");
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: $dark;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  font-family: 'TT Interfaces';
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  display: block;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $blue;
+  border-radius: 5px;
+}

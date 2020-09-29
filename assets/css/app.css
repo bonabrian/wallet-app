@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "TT Interfaces";
+  font-weight: normal;
+  font-style: normal;
+  src: url(../fonts/TTInterfaces-Regular.eot);
+  src: url(../fonts/TTInterfaces-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/TTInterfaces-Regular.woff2) format("woff2"), url(../fonts/TTInterfaces-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "TT Interfaces";
+  font-weight: bold;
+  font-style: normal;
+  src: url(../fonts/TTInterfaces-Bold.eot);
+  src: url(../fonts/TTInterfaces-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/TTInterfaces-Bold.woff2) format("woff2"), url(../fonts/TTInterfaces-Bold.woff) format("woff");
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #1e2023;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  font-family: "TT Interfaces";
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  display: block;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a5cff;
+  border-radius: 5px;
+}
+
+.card {
+  width: 100%;
+  box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.card__content {
+  padding: 0.75rem;
+}
+.card__title {
+  margin-bottom: 4px;
+}
+.card__text {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.wallet-container {
+  display: flex;
+  max-width: 480px;
+  background-color: #1a5cff;
+  border-radius: 4px;
+  margin: auto;
+  flex-direction: column;
+}
+.wallet-container .wallet-header {
+  padding: 1rem;
+  color: white;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+}
+.balance__title {
+  font-size: 1.25em;
+}
+.balance__value {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.summary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.summary .income {
+  font-size: 1em;
+}
+.summary .income__title {
+  opacity: 0.8;
+}
+.summary .expenses {
+  font-size: 1em;
+}
+.summary .expenses__title {
+  opacity: 0.8;
+}
+.summary .expenses__total {
+  color: #ff4757;
+}
+
+.wallet-dashboard {
+  display: block;
+  background-color: white;
+  border-radius: 20px 20px 4px 4px;
+}
+.wallet-dashboard__title {
+  display: inline-block;
+  color: #2c3e50;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+.wallet-dashboard .tabs {
+  display: block;
+  color: #2c3e50;
+  padding: 1rem 0;
+  margin: 0 1rem;
+}
+.wallet-dashboard .tabs .tab {
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0.8;
+  margin: 0 1rem;
+}
+.wallet-dashboard .tabs .tab.active {
+  opacity: 1;
+}
+.wallet-dashboard .tabs .tab:first-child {
+  margin-left: 0;
+}
+.wallet-dashboard .tabs .tab:last-child {
+  margin-right: 0;
+}
+.wallet-dashboard .tab-content {
+  margin: 0 1rem;
+}
+.wallet-dashboard .tab-content label {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding-top: 1rem;
+}
+.wallet-dashboard .tab-content .list {
+  height: 300px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+.wallet-dashboard .tab-content .list .expense .card__text {
+  color: #ff4757;
+}
+.wallet-dashboard .tab-content .list .entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wallet-dashboard .tab-content .list .entry .options {
+  display: flex;
+  font-size: 0.75rem;
+}
+.wallet-dashboard .tab-content .list .entry .options > div {
+  cursor: pointer;
+  margin: 0 4px;
+}
+.wallet-dashboard .tab-content .list .entry .options > div:nth-child(2) {
+  color: #ff4757;
+}
+.wallet-dashboard .tab-content .input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.wallet-dashboard .tab-content .input-container input {
+  width: 100%;
+  margin-right: 0.5rem;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f0f3f4;
+  color: #2c3e50;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  padding: 7px 13px 7px 10px;
+}
+input:focus {
+  outline: none;
+  border-color: #1a5cff;
+}
+
+button {
+  background-color: #1a5cff;
+  color: white;
+  border: 0;
+  outline: none;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+button:hover {
+  background-color: #0042e6;
+}
+
+.hide {
+  display: none !important;
+}
+
+/*# sourceMappingURL=app.css.map */

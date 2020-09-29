@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Application</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="wallet-container">
+
+      <div class="wallet-header">
+        <div class="balance">
+          <div class="balance__title">Balance</div>
+          <div class="balance__value">
+            <span>Rp</span> <span id="balance">0</span>
+          </div>
+        </div>
+
+        <div class="summary">
+
+          <div class="income">
+            <div class="income__title">Income</div>
+            <div class="income__total">
+              <span>Rp</span> <span id="total-income">0</span>
+            </div>
+          </div>
+
+          <div class="expenses">
+            <div class="expenses__title">Expenses</div>
+            <div class="expenses__total">
+              <span>Rp</span> <span id="total-expenses">0</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="wallet-dashboard">
+        <div class="wallet-dashboard__title">Dashboard</div>
+        <ul class="tabs">
+          <li class="tab tab--all active" data-target="all">All</li>
+          <li class="tab tab--income" data-target="income">Income</li>
+          <li class="tab tab--expenses" data-target="expenses">Expenses</li>
+        </ul>
+        <div class="tab-content" id="all">
+          <ul class="list"></ul>
+        </div>
+        <div class="hide tab-content" id="income">
+          <ul class="list"></ul>
+          <label>Add Income</label>
+          <div class="input-container">
+            <input type="text" class="income-title" placeholder="Title">
+            <input type="text" class="income-amount" placeholder="0">
+            <button class="add-income">Add</button>
+          </div>
+        </div>
+        <div class="hide tab-content" id="expenses">
+          <ul class="list"></ul>
+          <label>Add Expense</label>
+          <div class="input-container">
+            <input type="text" class="expense-title" placeholder="Title">
+            <input type="text" class="expense-amount" placeholder="0">
+            <button class="add-expense">Add</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/wallet.js"></script>
+</body>
+</html>
