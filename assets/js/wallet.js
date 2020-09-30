@@ -116,8 +116,6 @@ const incomeList = document.querySelector('#income .list');
 const expenseList = document.querySelector('#expenses .list');
 const allList = document.querySelector('#all .list');
 const updateUI = () => {
-  setActive(document.querySelector('.tab--' + SELECTED_TAB));
-  showTab(document.querySelector('#' + SELECTED_TAB));
   totalIncome = calculateTotal('income', ENTRY_LIST);
   totalExpenses = calculateTotal('expense', ENTRY_LIST);
   balance = Math.abs(calculateBalance(totalIncome, totalExpenses));
@@ -197,6 +195,8 @@ ENTRY_LIST = JSON.parse(localStorage.getItem('entryList')) || [];
 SELECTED_TAB = localStorage.getItem('selectedTab') || 'all';
 /* Then update the UI */
 updateUI();
+setActive(document.querySelector('.tab--' + SELECTED_TAB));
+showTab(document.querySelector('#' + SELECTED_TAB));
 
 /* All tabs */
 const tabs = document.querySelectorAll('.tab');
@@ -270,11 +270,3 @@ btnAddExpense.addEventListener('click', function () {
 incomeList.addEventListener('click', editOrDelete);
 expenseList.addEventListener('click', editOrDelete);
 allList.addEventListener('click', editOrDelete);
-
-// const deleteElem = document.querySelectorAll('.delete');
-// deleteElem.forEach(elem => {
-//   elem.addEventListener('click', function () {
-//     const entry = elem.getAttribute('data-entry');
-//     deleteEntry(entry);
-//   });
-// });
